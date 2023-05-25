@@ -8,7 +8,7 @@ export const ROUTES_DIVIDELO: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'introduccion'
+    redirectTo: 'integracion'
   },
   {
     path: 'introduccion',
