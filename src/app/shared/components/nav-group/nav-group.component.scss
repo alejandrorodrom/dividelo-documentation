@@ -1,0 +1,29 @@
+.group {
+  user-select: none;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: Geometria-Bold, monospace;
+    cursor: pointer;
+  }
+
+  &__menu {
+    border-width: 2px;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left-color: #d6f1da;
+    margin-left: 12px;
+
+    &--item {
+      font-family: Geometria-Regular, monospace;
+      font-size: 14.4px;
+      margin: 0 0 15px 17px;
+      cursor: pointer;
+    }
+  }
+}

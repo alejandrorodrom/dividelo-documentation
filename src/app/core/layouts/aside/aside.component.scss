@@ -1,0 +1,29 @@
+.aside {
+  position: fixed;
+  top: 64px;
+  width: 215px;
+  height: 100%;
+  box-shadow: 1px 0 6px 0 #cecece;
+  padding: 30px 20px 0;
+
+  &__section {
+    margin-bottom: 30px;
+
+    &--title {
+      color: #878c8f;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: Geometria-Bold, monospace;
+    }
+
+    &--option {
+      font-size: 16px;
+      cursor: pointer;
+      font-family: Geometria-Bold, monospace;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

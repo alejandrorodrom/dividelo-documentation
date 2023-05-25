@@ -1,0 +1,17 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ConfigurationStylesComponent } from './pages/configuration-styles/configuration-styles.component';
+import { RouterModule } from "@angular/router";
+import { ROUTES_GENERAL } from "./general.routing";
+
+
+@NgModule({
+  declarations: [
+    ConfigurationStylesComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(ROUTES_GENERAL)
+  ]
+})
+export class GeneralModule { }

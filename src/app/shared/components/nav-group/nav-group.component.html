@@ -1,0 +1,9 @@
+<section class="group">
+  <p class="group__title" (click)="actionGroup()">
+    {{ data.title }}
+    <img ngSrc="assets/icons/arrow.svg" alt="" height="24" width="24" [style.transform]="isOpen ? 'rotate(90deg)' : 'rotate(0)'">
+  </p>
+  <div class="group__menu" *ngIf="isOpen">
+    <p class="group__menu--item" [routerLink]="item.url" *ngFor="let item of data.items">{{ item.name }}</p>
+  </div>
+</section>
