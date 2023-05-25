@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/highlight.js/styles/github.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "highlight.js"
+            ]
           },
           "configurations": {
             "production": {

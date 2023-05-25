@@ -16,10 +16,9 @@ export interface NavGroup {
 export class NavGroupComponent {
   @Input() data!: NavGroup;
 
-  isOpen = false;
+  isOpen = true;
 
   actionGroup(): void {
     this.isOpen = !this.isOpen;
-    console.log(this.isOpen)
   }
 }

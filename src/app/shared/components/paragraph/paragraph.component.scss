@@ -1,0 +1,23 @@
+.paragraph {
+  font-family: Geometria-Regular, monospace;
+  font-size: 16px;
+
+  &__opaque {
+    color: gray;
+    font-style: italic;
+  }
+
+  &__no-margin {
+    margin: 0;
+  }
+
+  & .blue {
+    font-family: Geometria-Medium, monospace;
+    color: #0039a6;
+  }
+
+  & .bold {
+    font-family: Geometria-Medium, monospace;
+  }
+}
+

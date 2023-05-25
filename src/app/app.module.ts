@@ -15,7 +15,6 @@ import { CoreModule } from "./core/core.module";
     CoreModule,
     RouterModule.forRoot(ROUTES_APP)
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

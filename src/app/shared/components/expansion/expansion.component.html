@@ -1,0 +1,9 @@
+<div class="expansion">
+  <div class="expansion__title" (click)="openExpansion()">
+    <ng-content select="[title]"></ng-content>
+    <img ngSrc="assets/icons/arrow.svg" height="24" width="24" alt="" [style.transform]="isOpen ? 'rotate(-90deg)' : 'rotate(90deg)'">
+  </div>
+  <div class="expansion__content" *ngIf="isOpen">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</div>

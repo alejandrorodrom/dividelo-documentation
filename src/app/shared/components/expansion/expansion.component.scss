@@ -1,0 +1,20 @@
+.expansion {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 30px;
+    margin: 25px 0 0 0;
+    border: solid 1px #d9dadb;
+    cursor: pointer;
+
+    &--icon {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__content {
+    border: solid 1px #d9dadb;
+    border-top: none;
+    padding: 18px 30px;
+  }
+}

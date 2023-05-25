@@ -1,1 +1,19 @@
-<p>integration works!</p>
+<app-title>Integración</app-title>
+
+<div class="tab">
+  <button #tabOption class="tab__option" (click)="showTab('Etapas', 'phase')">Etapas</button>
+  <button #tabOption class="tab__option" (click)="showTab('Primeros pasos', 'frontSteps')">Primeros pasos</button>
+  <button #tabOption class="tab__option" (click)="showTab('Integracion de componentes', 'integration')">Integracion de componentes</button>
+</div>
+
+<div #tabContent id="phase" class="tab__content">
+  <app-phase></app-phase>
+</div>
+
+<div #tabContent id="frontSteps" class="tab__content">
+  <app-front-steps></app-front-steps>
+</div>
+
+<div #tabContent id="integration" class="tab__content">
+  <app-integration-component></app-integration-component>
+</div>

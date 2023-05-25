@@ -1,0 +1,29 @@
+.code-block {
+  pre {
+    margin-bottom: -15px;
+  }
+
+  code {
+    font-family: 'Geometria-Regular', monospace;
+    background-color: #f5f7ff;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: right;
+
+  &__action {
+    font-size: 12px;
+    background-color: #d7d7d7;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 8px 5px 8px;
+    cursor: pointer;
+    width: 72px;
+
+    &:hover {
+      background-color: #b2b5b6;
+    }
+  }
+}
