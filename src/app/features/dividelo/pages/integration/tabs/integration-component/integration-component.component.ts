@@ -76,6 +76,18 @@ export class IntegrationComponentComponent {
     </split-payment-previous>
   `;
 
+  readonly scriptPreviousMedium: string = `
+    <split-payment-previous
+      medium-brand>
+    </split-payment-previous>
+  `;
+
+  readonly scriptPreviousBlack: string = `
+    <split-payment-previous
+      interbank-black>
+    </split-payment-previous>
+  `;
+
 
   readonly scriptDecision: string = `
     <!--
