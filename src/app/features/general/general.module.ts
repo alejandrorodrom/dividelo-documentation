@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ConfigurationStylesComponent } from './pages/configuration-styles/configuration-styles.component';
 import { RouterModule } from "@angular/router";
 import { ROUTES_GENERAL } from "./general.routing";
+import { SharedModule } from "../../shared/shared.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ROUTES_GENERAL } from "./general.routing";
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(ROUTES_GENERAL)
+    RouterModule.forChild(ROUTES_GENERAL),
+    SharedModule
   ]
 })
 export class GeneralModule { }

@@ -1,1 +1,32 @@
-<p>configuration-styles works!</p>
+<app-title>Configuración de estilos</app-title>
+
+<app-paragraph>
+  ¡Personalizar cada <span class="bold">Web Component</span> de <span class="bold">Interbank</span> es posible! Puedes
+  configurar la paleta de colores o cambiar su comportamiento para que se adapte de la mejor manera a tu página web.
+</app-paragraph>
+
+<div class="colors">
+  <app-subtitle>Personalizar paleta de colores</app-subtitle>
+  <app-paragraph>
+    Cada Web Component sigue un diseño al estilo de Material Design por lo que para configurar los colores que serán
+    usados dentro de todo el componente se pueden definir tres colores ( <span class="bold">primary</span>,
+    <span class="bold">secondary</span> y <span class="bold">accent</span>) que deberán ser indicados en atributos con
+    notación <span class="bold">HEXADECIMAL</span>:
+  </app-paragraph>
+  <app-code-block [code]="scriptColors"></app-code-block>
+</div>
+
+<div class="typography">
+  <app-subtitle>Personalizar tipografía</app-subtitle>
+  <app-paragraph>Cambiar la tipografía del componente es posible según la identidad de tu página.</app-paragraph>
+  <app-paragraph>
+    Primero las tipografías a usar deberán ser cargadas como se hace normalmente en el documento:
+  </app-paragraph>
+  <app-code-block [code]="scriptTypographyCss"></app-code-block>
+  <app-paragraph>
+    Se cargarán un total de 3 fuentes, esto debido a que el web component usa tres tipos:
+    <span class="bold">Regular</span>, <span class="bold">Semi-bold</span> y <span class="bold">Bold</span>.
+  </app-paragraph>
+  <app-paragraph>Por lo que será necesario especificarlas, si es que se desea tener la distinción:</app-paragraph>
+  <app-code-block [code]="scriptTypography"></app-code-block>
+</div>

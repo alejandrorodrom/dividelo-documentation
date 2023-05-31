@@ -1,8 +1,13 @@
 <aside class="aside">
-<!--  <div class="aside__section">-->
-<!--    <h4 class="aside__section&#45;&#45;title">General</h4>-->
-<!--    <h3 class="aside__section&#45;&#45;option" routerLink="/general/configuracion-estilos">Configuracion de estilos</h3>-->
-<!--  </div>-->
+  <div class="aside__section">
+    <h4 class="aside__section--title">General</h4>
+    <h3
+      class="aside__section--option"
+      routerLink="/general/configuracion-estilos"
+      routerLinkActive="aside__section--option-active">
+      Configuracion de estilos
+    </h3>
+  </div>
   <div class="aside__section">
     <h4 class="aside__section--title">Proyectos</h4>
     <div *ngFor="let item of data">

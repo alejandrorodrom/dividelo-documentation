@@ -5,6 +5,7 @@
   height: 100%;
   box-shadow: 1px 0 6px 0 #cecece;
   padding: 30px 20px 0;
+  user-select: none;
 
   &__section {
     margin-bottom: 30px;
@@ -20,9 +21,17 @@
       font-size: 16px;
       cursor: pointer;
       font-family: Geometria-Bold, monospace;
+      padding: 10px;
+      border-radius: 5px;
 
       &:hover {
         text-decoration: underline;
+      }
+
+      &-active {
+        //padding: 10px;
+        background-color: #dbf6e6;
+        //border-radius: 5px;
       }
     }
   }
