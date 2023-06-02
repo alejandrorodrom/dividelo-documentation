@@ -4,11 +4,13 @@ import { ConfigurationStylesComponent } from './pages/configuration-styles/confi
 import { RouterModule } from "@angular/router";
 import { ROUTES_GENERAL } from "./general.routing";
 import { SharedModule } from "../../shared/shared.module";
+import { PartnerRegistrationComponent } from './pages/partner-registration/partner-registration.component';
 
 
 @NgModule({
   declarations: [
-    ConfigurationStylesComponent
+    ConfigurationStylesComponent,
+    PartnerRegistrationComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,73 @@
+<app-title>Registro de socio</app-title>
+
+<app-paragraph>
+  Complétalo para registrarte como socio aliado, así accederás a las
+  <span class="bold">credenciales de los productos</span> que tenemos para ti.
+</app-paragraph>
+
+<app-subtitle>¿Cuál es el proceso?</app-subtitle>
+
+<app-subtitle [secondLevel]="true">1. Proporciona tus datos</app-subtitle>
+<app-paragraph>
+  Deberás de comunicarte con el equipo de soporte de Interbank para entregarle los siguientes datos del
+  <span class="bold">responsable técnico</span>:
+</app-paragraph>
+<ul>
+  <li>
+    <app-paragraph [noMargin]="true">
+      <span class="bold">Nombre completo</span>
+    </app-paragraph>
+  </li>
+  <li>
+    <app-paragraph [noMargin]="true">
+      <span class="bold">Correo electrónico corporativo</span>
+    </app-paragraph>
+  </li>
+</ul>
+
+<app-subtitle [secondLevel]="true">2. Recibe tus credenciales de prueba</app-subtitle>
+<app-paragraph>
+  Una vez registrado te serán entregados los siguientes datos:
+</app-paragraph>
+<ul>
+  <li>
+    <app-paragraph [noMargin]="true">
+      <span class="bold">Credenciales de prueba</span>:
+      Tu id de aplicación y contraseña.
+    </app-paragraph>
+  </li>
+  <li>
+    <app-paragraph [noMargin]="true">
+      <span class="bold">Subscription Key</span>:
+      Llave de suscripción que deberás usar como propiedad si se integra a través del
+      <span class="bold">Web Component</span> o tambien como cabecera en todas las peticiones de integrarse mediante el
+      <span class="bold">API de Interbank</span>.
+    </app-paragraph>
+  </li>
+</ul>
+<app-toast [type]="ToastType.INFO">
+  Recuerda que estas credenciales son para las pruebas funcionales en un ambiente controlado, no se deben de usar
+  para salir a producción.
+</app-toast>
+
+<app-subtitle [secondLevel]="true">3. Genera credenciales de producción</app-subtitle>
+<app-paragraph>
+  Al final de la integración, te crearemos otras credenciales especiales cuando:
+</app-paragraph>
+<ul>
+  <li>
+    <app-paragraph [noMargin]="true">
+      Cumplas todo el <span class="bold">paso a paso de integración</span> del producto que quieras integrar
+    </app-paragraph>
+  </li>
+  <li>
+    <app-paragraph [noMargin]="true">
+      Las <span class="bold">pruebas funcionales</span> tengan el <span class="bold">visto bueno de Interbank</span>
+    </app-paragraph>
+  </li>
+  <li>
+    <app-paragraph [noMargin]="true">
+        El <span class="bold">contrato comercial</span> este <span class="bold">firmado</span>
+    </app-paragraph>
+  </li>
+</ul>
