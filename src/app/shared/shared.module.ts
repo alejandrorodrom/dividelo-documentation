@@ -8,6 +8,8 @@ import { ParagraphComponent } from './components/paragraph/paragraph.component';
 import { ExpansionComponent } from './components/expansion/expansion.component';
 import { CodeBlockComponent } from './components/code-block/code-block.component';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
+import { TabGroupComponent } from './components/tab-group/tab-group.component';
+import { TabComponent } from './components/tab-group/tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
     SubtitleComponent,
     ParagraphComponent,
     ExpansionComponent,
-    CodeBlockComponent
+    CodeBlockComponent,
+    TabGroupComponent,
+    TabComponent
   ],
   exports: [
     NavGroupComponent,
@@ -24,7 +28,9 @@ import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
     ParagraphComponent,
     SubtitleComponent,
     ExpansionComponent,
-    CodeBlockComponent
+    CodeBlockComponent,
+    TabGroupComponent,
+    TabComponent
   ],
   imports: [
     CommonModule,

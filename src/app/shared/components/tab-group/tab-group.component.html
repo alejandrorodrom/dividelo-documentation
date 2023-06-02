@@ -1,0 +1,7 @@
+<div class="tab">
+  <button #tabOption class="tab__option" *ngFor="let tab of dataTabs" (click)="showTab(tab.label, tab.id)">
+    {{ tab.label }}
+  </button>
+</div>
+
+<ng-content></ng-content>
