@@ -1,1 +1,198 @@
-<p>introduction works!</p>
+<app-title>Introducción</app-title>
+
+<img src="assets/images/dividelo/logo.svg" alt="logo" class="image">
+
+<div class="description">
+  <app-paragraph [noMargin]="true">
+    Es la nueva forma de pagar en
+    <span class="bold">cuotas preferenciales</span>
+    con tarjetas de crédito Interbank.
+  </app-paragraph>
+  <app-paragraph [noMargin]="true">
+    Ofrecemos a nuestros clientes
+    <span class="bold">alternativas de financiamiento inmediato</span>
+    para adquirir productos de <span class="bold">ticket alto</span>,
+    brindando transparencia (plazos y cuotas) para realizar su compra
+    <span class="bold">sin evaluación previa</span>.
+  </app-paragraph>
+</div>
+
+<app-subtitle>¿Cómo funciona?</app-subtitle>
+
+<section class="steps">
+  <div class="step">
+    <span class="step__number">1</span>
+    <p class="step__description">
+      Elige el producto que quieres comprar
+    </p>
+    <p class="step__detail">
+      Encontrarás la opción de pagar en cuotas con Divídelo Interbank.
+    </p>
+  </div>
+
+  <div class="step">
+    <span class="step__number">2</span>
+    <p class="step__description">
+      Escoge el plazo y cuota que te convenga
+    </p>
+    <p class="step__detail">
+      Explora varias opciones en el simulador de Divídelo.
+    </p>
+  </div>
+
+  <div class="step">
+    <span class="step__number">3</span>
+    <p class="step__description">
+      Ve al checkout y realiza tu compra en cuotas
+    </p>
+    <p class="step__detail">
+      Tendrás que ingresar los datos de tu tarjeta Interbank.
+    </p>
+  </div>
+</section>
+
+<app-subtitle>Beneficios para el comercio</app-subtitle>
+
+<div class="description">
+  <app-paragraph [noMargin]="true">
+    Esta solución de pago permite maximizar el <span class="bold">tráfico de concurrencia</span> acompañado de una
+    <span class="bold">mayor conversión en ventas</span>, todo esto traducido a
+    <span class="bold">tickets de compra más altos</span>.
+  </app-paragraph>
+  <app-paragraph [noMargin]="true">
+    Además, ofrecemos <span class="bold">alternativas de integración sencillas y eficaces</span>
+    que agilizan el proceso en todas sus etapas.
+  </app-paragraph>
+</div>
+
+<section class="stats">
+  <div class="stat">
+    <span class="stat__text">X2</span>
+    <p class="stat__description">Share en tickets altos</p>
+  </div>
+
+  <div class="stat">
+    <span class="stat__text">+30%</span>
+    <p class="stat__description">
+      Crecimiento en tickets mayores a S/. 1,000
+    </p>
+  </div>
+
+  <div class="stat">
+    <span class="stat__text">+39%</span>
+    <p class="stat__description">Visitas en la web</p>
+  </div>
+</section>
+
+<div class="toast">
+  <app-toast [type]="ToastType.INFO">Data recopilada de caso de uso de Interbank Divídelo en Shopstar.pe</app-toast>
+</div>
+
+<app-subtitle>¿Cómo integro Divídelo Interbank a mi web?</app-subtitle>
+
+<ol>
+  <li>
+    <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Regístrate como socio aliado</app-subtitle>
+    <app-paragraph [noMargin]="true">
+      Para iniciar la integración es necesario registrar los datos del <span
+      class="bold">responsable de desarrollo</span>
+      para que le brindemos las <span class="bold">credenciales de prueba</span>.
+    </app-paragraph>
+  </li>
+  <li>
+    <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Revisa la experiencia y recursos de diseño</app-subtitle>
+    <app-paragraph [noMargin]="true">
+      El diseño de Divídelo está preparado en base a Componentes con sustento en otras webs. Además, tenemos una
+      <a href="assets/resources/dividelo/resources_ux_ui_guide.pdf" download target="_blank">guía UX/UI</a> que hemos
+      definido para cumplir con la experiencia de diseño Interbank.
+    </app-paragraph>
+  </li>
+  <li>
+    <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Escoge tu tipo de integración</app-subtitle>
+    <app-paragraph [noMargin]="true">
+      Te ofrecemos soluciones a <span class="bold">tu medida y alcance</span>.
+    </app-paragraph>
+    <div class="boxes">
+      <div class="box">
+        <div class="box__content">
+          <span class="box__title">Web Components</span>
+          <p class="box__description">
+            Te brindamos los componentes y diseño de nuestra experiencia
+            para que <b>solo posiciones el código</b>.
+          </p>
+        </div>
+        <img class="box__icon" src="assets/images/dividelo/wc_icon.svg" alt="Web Component"/>
+      </div>
+
+      <div class="box box--lighter">
+        <div class="box__content">
+          <span class="box__title">APIs</span>
+          <p class="box__description">
+            Construye el <b>diseño y el código</b> de Interbank Divídelo con
+            la data que te proporcionemos.
+          </p>
+        </div>
+        <img class="box__icon" src="assets/images/dividelo/api_icon.svg" alt="APIs"/>
+      </div>
+    </div>
+  </li>
+</ol>
+
+<div class="web-component">
+  <app-subtitle [secondLevel]="true" [opaque]="true">SI LA INTEGRACIÓN SE DARÁ MEDIANTE WEB COMPONENTS:</app-subtitle>
+  <ol>
+    <li value="4">
+      <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Realiza pruebas en nuestro sandbox</app-subtitle>
+      <app-paragraph [noMargin]="true">
+        Asegúrate de la construcción de los componentes, así como de la validez de tus credenciales.
+      </app-paragraph>
+    </li>
+    <li>
+      <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Sigue el código de integración y personalización</app-subtitle>
+      <app-paragraph [noMargin]="true">
+        Revisa el código que hemos desarrollado para cada uno de los componentes y personalízalos.
+      </app-paragraph>
+    </li>
+    <li>
+      <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Posiciona los componentes en tu web</app-subtitle>
+      <app-paragraph [noMargin]="true">
+        Sigue la diagramación adecuada y posiciona los componentes.
+      </app-paragraph>
+    </li>
+  </ol>
+</div>
+
+
+<div class="api">
+  <app-subtitle [secondLevel]="true" [opaque]="true">SI LA INTEGRACIÓN SE DARÁ MEDIANTE APIS:</app-subtitle>
+  <ol>
+    <li value="4">
+      <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Construye el componente front-end</app-subtitle>
+      <app-paragraph [noMargin]="true">
+        Con los recursos y la guía de experiencia crea los componentes que necesitarás para integrar Divídelo.
+      </app-paragraph>
+    </li>
+    <li>
+      <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Obtén la información de simulación</app-subtitle>
+      <app-paragraph [noMargin]="true">
+        De acuerdo a las APIs que te proporcionemos adquiere la información que necesitas.
+      </app-paragraph>
+    </li>
+    <li>
+      <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Integra los componentes en tu web</app-subtitle>
+      <app-paragraph [noMargin]="true">
+        Asegúrate de la construcción de los componentes así como su debido posicionamiento.
+      </app-paragraph>
+    </li>
+  </ol>
+</div>
+
+<ol>
+  <li value="7">
+    <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Pide tus credenciales de producción y ¡Listo!</app-subtitle>
+    <app-paragraph [noMargin]="true">
+      Cambia las credenciales (cuando cumplas las normativas de interbank) para darte una tasa real según el acuerdo
+      comercial y ya podrás salir a producción.
+    </app-paragraph>
+  </li>
+</ol>

@@ -5,4 +5,16 @@
   &__no-margin {
     margin: 0;
   }
+
+  &__no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+  &__second-level {
+    font-size: 16px;
+  }
+
+  &__opaque {
+    color: gray;
+  }
 }

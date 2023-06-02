@@ -7,5 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class SubtitleComponent {
   @Input() noMargin = false;
+  @Input() noMarginBottom = false;
+  @Input() opaque = false;
+  @Input() secondLevel = false;
 
 }

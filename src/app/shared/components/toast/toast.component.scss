@@ -1,0 +1,19 @@
+.toast {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 23px;
+  border-radius: 4px;
+  background-color: #FFEFCA;
+  padding: 16px;
+  font-family: Geometria-Regular, monospace;
+
+  &__icon {
+    margin-right: 7px;
+  }
+  &__message {
+    margin-top: 2px;
+    text-align: left;
+    font-size: 14px;
+  }
+}

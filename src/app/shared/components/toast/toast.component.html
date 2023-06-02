@@ -1,0 +1,6 @@
+<div class="toast" [style.background-color]="getToastColor(this.type)">
+  <img class="toast__icon" [src]="getIconUrl(this.type)" alt="toast icon" />
+  <div class="toast__message">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { CodeBlockComponent } from './components/code-block/code-block.component
 import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
 import { TabGroupComponent } from './components/tab-group/tab-group.component';
 import { TabComponent } from './components/tab-group/tab/tab.component';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TabComponent } from './components/tab-group/tab/tab.component';
     ExpansionComponent,
     CodeBlockComponent,
     TabGroupComponent,
-    TabComponent
+    TabComponent,
+    ToastComponent
   ],
   exports: [
     NavGroupComponent,
@@ -30,7 +32,8 @@ import { TabComponent } from './components/tab-group/tab/tab.component';
     ExpansionComponent,
     CodeBlockComponent,
     TabGroupComponent,
-    TabComponent
+    TabComponent,
+    ToastComponent
   ],
   imports: [
     CommonModule,

@@ -13,6 +13,10 @@ export class AsideComponent {
       title: 'Divídelo',
       items: [
         {
+          name: 'Introducción',
+          url: '/dividelo/introduccion'
+        },
+        {
           name: 'Integración',
           url: '/dividelo/integracion'
         }

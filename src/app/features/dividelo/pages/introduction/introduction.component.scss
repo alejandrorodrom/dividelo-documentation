@@ -1,0 +1,125 @@
+.description {
+  margin-top: 20px;
+}
+
+.steps {
+  margin: 35px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .step {
+    max-width: 160px;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    &__number {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #0039a6;
+      width: 35px;
+      height: 35px;
+      color: white;
+    }
+
+    &__description {
+      font-family: Geometria-Medium, monospace;
+      color: #05be50;
+    }
+
+    &__detail {
+      color: #00369c;
+      font-family: Geometria-Regular, monospace;
+      font-size: 11px;
+    }
+  }
+}
+
+.stats {
+  margin: 35px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .stat {
+    max-width: 160px;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__text {
+      font-family: Geometria-Bold, monospace;
+      color: #00369c;
+      font-size: 25px;
+    }
+
+    &__description {
+      font-family: Geometria-Bold, monospace;
+      font-size: 14px;
+    }
+  }
+}
+
+.toast {
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+
+li {
+  font-family: Geometria-Medium, monospace, monospace;
+}
+
+.boxes {
+  display: flex;
+  margin: 30px 0;
+
+  .box {
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #3361b8;
+    padding: 10px 10px 10px 24px;
+    max-width: 308px;
+    min-height: 144px;
+    color: white;
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__title {
+      font-family: Geometria-Medium, monospace;
+    }
+
+    &__description {
+      font-size: 11px;
+      font-family: Geometria-Regular, monospace;
+
+      b {
+        font-family: Geometria-Bold, monospace;
+      }
+    }
+
+    &__icon {
+      margin-left: 15px;
+    }
+
+    &--lighter {
+      background-color: #6688CA;
+    }
+  }
+}
+
+.api, .web-component {
+  margin: 40px 0;
+}
