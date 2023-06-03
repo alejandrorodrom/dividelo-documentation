@@ -1,0 +1,59 @@
+.identity {
+  margin-top: 40px;
+
+  &__columns {
+    display: flex;
+
+    &--text {
+      max-width: 500px;
+      margin-right: 25px;
+    }
+
+    &--links {
+      & > * {
+        display: block;
+      }
+
+      & > :last-child {
+        margin-top: 20px;
+      }
+
+      & > :not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.editables {
+  margin-top: 40px;
+
+  &__columns {
+    display: flex;
+
+    &--text {
+      max-width: 500px;
+      margin-right: 25px;
+    }
+
+    &--files {
+      .links {
+        display: flex;
+        gap: 30px;
+        text-align: center;
+
+        &__sketch, &__ilustrator, &__figma {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          & > img {
+            text-align: center;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+

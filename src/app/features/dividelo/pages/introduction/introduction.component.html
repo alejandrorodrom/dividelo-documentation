@@ -1,6 +1,6 @@
 <app-title>Introducción</app-title>
 
-<img src="assets/images/dividelo/logo.svg" alt="logo" class="image">
+<img src="../../../../../assets/images/dividelo/introduction/logo.svg" alt="logo" class="image">
 
 <div class="description">
   <app-paragraph [noMargin]="true">
@@ -103,8 +103,12 @@
     <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Revisa la experiencia y recursos de diseño</app-subtitle>
     <app-paragraph [noMargin]="true">
       El diseño de Divídelo está preparado en base a Componentes con sustento en otras webs. Además, tenemos una
-      <a href="assets/resources/dividelo/resources_ux_ui_guide.pdf" download target="_blank">guía UX/UI</a> que hemos
-      definido para cumplir con la experiencia de diseño Interbank.
+      <app-link
+        text="guía UX/UI"
+        href="assets/resources/dividelo/resources_ux_ui_guide.pdf"
+        [download]="true">
+      </app-link>
+      que hemos definido para cumplir con la experiencia de diseño Interbank.
     </app-paragraph>
   </li>
   <li>
@@ -121,7 +125,7 @@
             para que <b>solo posiciones el código</b>.
           </p>
         </div>
-        <img class="box__icon" src="assets/images/dividelo/wc_icon.svg" alt="Web Component"/>
+        <img class="box__icon" src="../../../../../assets/images/dividelo/introduction/wc_icon.svg" alt="Web Component"/>
       </div>
 
       <div class="box box--lighter">
@@ -132,7 +136,7 @@
             la data que te proporcionemos.
           </p>
         </div>
-        <img class="box__icon" src="assets/images/dividelo/api_icon.svg" alt="APIs"/>
+        <img class="box__icon" src="../../../../../assets/images/dividelo/introduction/api_icon.svg" alt="APIs"/>
       </div>
     </div>
   </li>
@@ -152,6 +156,7 @@
       <app-paragraph [noMargin]="true">
         Revisa el código que hemos desarrollado para cada uno de los componentes y personalízalos.
       </app-paragraph>
+      <app-link href="dividelo/integracion" [withArrow]="true" [noUnderline]="true"></app-link>
     </li>
     <li>
       <app-subtitle [secondLevel]="true" [noMarginBottom]="true">Posiciona los componentes en tu web</app-subtitle>

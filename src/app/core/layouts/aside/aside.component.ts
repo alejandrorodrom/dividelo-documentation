@@ -17,6 +17,10 @@ export class AsideComponent {
           url: '/dividelo/introduccion'
         },
         {
+          name: 'Recursos',
+          url: '/dividelo/recursos'
+        },
+        {
           name: 'Integración',
           url: '/dividelo/integracion'
         }

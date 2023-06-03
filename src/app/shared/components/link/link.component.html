@@ -1,0 +1,8 @@
+<a
+  class="link"
+  [href]="href"
+  [class.link__no-underline]="noUnderline"
+  [attr.download]="download ? '' : null">
+  {{ text }}
+  <img *ngIf="withArrow" class="link__arrow" src="assets/icons/arrow.svg" alt="arrow">
+</a>

@@ -1,0 +1,15 @@
+.link {
+  user-select: none;
+  color: #05be50;
+  font-family: Geometria-Medium, monospace;
+  font-size: 16px;
+  cursor: pointer;
+
+  &__arrow {
+    vertical-align: middle;
+  }
+
+  &__no-underline {
+    text-decoration: none;
+  }
+}
