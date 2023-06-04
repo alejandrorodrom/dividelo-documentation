@@ -1,8 +1,20 @@
-<a
-  class="link"
-  [href]="href"
-  [class.link__no-underline]="noUnderline"
-  [attr.download]="download ? '' : null">
-  {{ text }}
-  <img *ngIf="withArrow" class="link__arrow" src="assets/icons/arrow.svg" alt="arrow">
-</a>
+<ng-container *ngIf="download else notDownload">
+  <a
+    class="link"
+    [attr.href]="href"
+    [class.link__no-underline]="noUnderline"
+    download>
+    {{ text }}
+    <img *ngIf="withArrow" class="link__arrow" src="assets/icons/arrow.svg" alt="arrow">
+  </a>
+</ng-container>
+
+<ng-template #notDownload>
+  <a
+    class="link"
+    [routerLink]="href"
+    [class.link__no-underline]="noUnderline">
+    {{ text }}
+    <img *ngIf="withArrow" class="link__arrow" src="assets/icons/arrow.svg" alt="arrow">
+  </a>
+</ng-template>
