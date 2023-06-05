@@ -1,0 +1,13 @@
+<label *ngIf="label" class="label">
+  <span *ngIf="required" class="label__required">*</span>
+  <span [class.label__error]="error">{{ label }}</span>
+</label>
+<input
+  class="input"
+  [class.input__error]="error"
+  [type]="type"
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [value]="value ? value : ''"
+  (input)="onInput($event)"
+/>

@@ -1,0 +1,55 @@
+:host {
+  display: block;
+
+  .label {
+    display: block;
+    font-family: Geometria-Regular, monospace;
+    margin-top: 8px;
+
+    &__required {
+      margin-right: 5px;
+      color: red;
+    }
+
+    &__error {
+      color: red;
+    }
+  }
+
+  .input {
+    margin: 8px 0;
+    outline: 0;
+    border: solid 1px #D9DADB;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-family: Geometria-Medium, monospace;
+    font-size: 14px;
+    caret-color: #05be50;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #D9DADB;
+    }
+
+    &:focus {
+      border-color: #05be50;
+    }
+
+    &__error {
+      color: red;
+      caret-color: red;
+      border-color: red;
+
+      &:focus {
+        border-color: red;
+      }
+
+      &::placeholder {
+        color: rgba(255, 0, 0, 0.5);
+      }
+    }
+  }
+
+}
+

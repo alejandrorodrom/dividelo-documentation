@@ -12,6 +12,7 @@ import { TabGroupComponent } from './components/tab-group/tab-group.component';
 import { TabComponent } from './components/tab-group/tab/tab.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { LinkComponent } from './components/link/link.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LinkComponent } from './components/link/link.component';
     TabGroupComponent,
     TabComponent,
     ToastComponent,
-    LinkComponent
+    LinkComponent,
+    InputComponent
   ],
   imports: [
     CommonModule,
