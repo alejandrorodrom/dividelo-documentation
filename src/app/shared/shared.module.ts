@@ -12,10 +12,11 @@ import { TabGroupComponent } from './components/tab-group/tab-group.component';
 import { TabComponent } from './components/tab-group/tab/tab.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { LinkComponent } from './components/link/link.component';
-import { InputComponent } from './components/input/input.component';
+import { InputComponent } from './components/inputs/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { ClickDirective } from './directives/click/click.directive';
 import { ButtonComponent } from './components/button/button.component';
+import { InputColorComponent } from './components/inputs/input-color/input-color.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ButtonComponent } from './components/button/button.component';
     InputComponent,
     SelectComponent,
     ClickDirective,
-    ButtonComponent
+    ButtonComponent,
+    InputColorComponent
   ],
   exports: [
     NavGroupComponent,
@@ -47,7 +49,8 @@ import { ButtonComponent } from './components/button/button.component';
     LinkComponent,
     InputComponent,
     SelectComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputColorComponent
   ],
   imports: [
     CommonModule,

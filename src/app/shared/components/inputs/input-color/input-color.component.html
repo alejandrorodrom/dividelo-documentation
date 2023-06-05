@@ -1,0 +1,10 @@
+<div class="input">
+  <label class="input__label">{{ label }}</label>
+  <input
+    class="input__color"
+    type="color"
+    [disabled]="disabled"
+    [value]="value ? value : ''"
+    (input)="onInput($event)"
+  />
+</div>
