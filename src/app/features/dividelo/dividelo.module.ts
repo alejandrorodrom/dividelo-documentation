@@ -13,6 +13,11 @@ import { FrontStepsComponent } from './pages/integration/tabs/front-steps/front-
 import {
   IntegrationComponentComponent
 } from './pages/integration/tabs/integration-component/integration-component.component';
+import { SandboxComponent } from './pages/sandbox/sandbox.component';
+import { VersionTwoComponent } from './pages/sandbox/versions/version-two/version-two.component';
+import { VersionOneComponent } from './pages/sandbox/versions/version-one/version-one.component';
+import { PayInThreeComponent } from './pages/sandbox/versions/pay-in-three/pay-in-three.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -23,13 +28,18 @@ import {
     IntegrationComponent,
     PhaseComponent,
     FrontStepsComponent,
-    IntegrationComponentComponent
+    IntegrationComponentComponent,
+    SandboxComponent,
+    VersionTwoComponent,
+    VersionOneComponent,
+    PayInThreeComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(ROUTES_DIVIDELO),
     SharedModule,
     NgOptimizedImage,
+    ReactiveFormsModule,
   ]
 })
 export class DivideloModule {

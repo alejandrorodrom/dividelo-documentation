@@ -1,0 +1,27 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: space-around;
+  row-gap: 10px;
+  column-gap: 30px;
+
+  &__definition {
+  }
+
+  &__personalization {
+    &--color {
+      .label {
+        display: inline-block;
+        margin-right: 10px;
+        min-width: 150px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+  }
+}

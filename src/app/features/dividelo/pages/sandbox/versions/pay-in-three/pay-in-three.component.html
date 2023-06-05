@@ -1,0 +1,81 @@
+<app-paragraph>
+  Ingresa los siguientes campos para crear la simulación del componente:
+</app-paragraph>
+
+<form class="form" [formGroup]="payInThree">
+  <div class="form__definition">
+    <app-subtitle [secondLevel]="true" [opaque]="true">
+      DEFINICIÓN
+    </app-subtitle>
+    <app-input
+      formControlName="subscriptionKey"
+      label="Subscription Key"
+      [required]="true"
+      placeholder="Ingrese el subscription key">
+    </app-input>
+    <app-input
+      formControlName="amount"
+      label="Monto"
+      type="number"
+      [required]="true"
+      placeholder="Ingrese el monto">
+    </app-input>
+    <app-select
+      formControlName="currency"
+      label="Moneda"
+      [options]="currencies">
+    </app-select>
+  </div>
+
+  <div class="form__personalization">
+    <app-subtitle [secondLevel]="true" [opaque]="true">
+      PERSONALIZACIÓN
+    </app-subtitle>
+    <app-input-color
+      formControlName="primaryColor"
+      label="Color primario"
+      value="#05BE50">
+    </app-input-color>
+    <app-input-color
+      formControlName="secondaryColor"
+      label="Color secundario"
+      value="#0039A6">
+    </app-input-color>
+    <app-input-color
+      formControlName="accentColor"
+      label="Color acento"
+      value="#F44336">
+    </app-input-color>
+    <app-input
+      formControlName="regularTypography"
+      label="Nombre de la tipografía regular"
+      placeholder="Ingrese el nombre">
+    </app-input>
+    <app-input
+      formControlName="mediumTypography"
+      label="Nombre de la tipografía media"
+      placeholder="Ingrese el nombre">
+    </app-input>
+    <app-input
+      formControlName="boldTypography"
+      label="Nombre de la tipografía negrilla"
+      placeholder="Ingrese el nombre">
+    </app-input>
+  </div>
+
+  <app-button
+    [disabled]="payInThree.status === 'INVALID'"
+    class="form__button"
+    (click)="generateWebComponent()">
+    Crear Web Component
+  </app-button>
+</form>
+
+<app-subtitle>Web Component</app-subtitle>
+<app-paragraph>
+  Presiona el botón
+  <span class="bold">crear web component</span>
+  para crearlo o actualizar su configuración
+</app-paragraph>
+
+<div #webComponent class="web-component"></div>

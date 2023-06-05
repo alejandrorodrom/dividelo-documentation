@@ -1,0 +1,22 @@
+<app-title>Sandbox</app-title>
+<app-paragraph>
+  Aquí podrás interactuar con el
+  <span class="bold">web component de simulación</span>
+  para ver su funcionamiento y posibles configuraciones.
+</app-paragraph>
+
+<app-tab-group>
+  <app-tab label="Version 1">
+    <app-version-one></app-version-one>
+  </app-tab>
+  <app-tab label="Version 2" [isDefault]="true">
+    <app-version-two></app-version-two>
+  </app-tab>
+  <app-tab label="Pay in 3">
+    <app-pay-in-three></app-pay-in-three>
+  </app-tab>
+</app-tab-group>
+
+<app-toast [type]="ToastType.INFO">
+  Recuerda que si la prueba de sandbox funciona, es muy seguro de que la integración funcione en tu página web.
+</app-toast>

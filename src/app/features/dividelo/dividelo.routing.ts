@@ -3,6 +3,7 @@ import { IntroductionComponent } from "./pages/introduction/introduction.compone
 import { ExperienceComponent } from "./pages/experience/experience.component";
 import { ResourcesComponent } from "./pages/resources/resources.component";
 import { IntegrationComponent } from "./pages/integration/integration.component";
+import { SandboxComponent } from "./pages/sandbox/sandbox.component";
 
 export const ROUTES_DIVIDELO: Routes = [
   {
@@ -21,6 +22,10 @@ export const ROUTES_DIVIDELO: Routes = [
   {
     path: 'recursos',
     component: ResourcesComponent
+  },
+  {
+    path: 'sandbox',
+    component: SandboxComponent
   },
   {
     path: 'integracion',
