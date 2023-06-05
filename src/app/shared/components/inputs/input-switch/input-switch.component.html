@@ -1,0 +1,11 @@
+<label class="switch">
+  {{ label }}
+  <input
+    type="checkbox"
+    class="switch__input"
+    [disabled]="disabled"
+    [checked]="checked"
+    (input)="onInput($event)"
+  />
+  <span class="switch__slider"></span>
+</label>

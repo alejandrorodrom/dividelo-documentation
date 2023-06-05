@@ -17,6 +17,7 @@ import { SelectComponent } from './components/select/select.component';
 import { ClickDirective } from './directives/click/click.directive';
 import { ButtonComponent } from './components/button/button.component';
 import { InputColorComponent } from './components/inputs/input-color/input-color.component';
+import { InputSwitchComponent } from './components/inputs/input-switch/input-switch.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { InputColorComponent } from './components/inputs/input-color/input-color
     SelectComponent,
     ClickDirective,
     ButtonComponent,
-    InputColorComponent
+    InputColorComponent,
+    InputSwitchComponent
   ],
   exports: [
     NavGroupComponent,
@@ -50,7 +52,8 @@ import { InputColorComponent } from './components/inputs/input-color/input-color
     InputComponent,
     SelectComponent,
     ButtonComponent,
-    InputColorComponent
+    InputColorComponent,
+    InputSwitchComponent
   ],
   imports: [
     CommonModule,
