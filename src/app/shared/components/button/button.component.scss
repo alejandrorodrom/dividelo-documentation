@@ -17,5 +17,10 @@
       cursor: pointer;
       background-color: #37cb73;
     }
+
+    &:disabled {
+      background-color: #D9DADB;
+      cursor: default;
+    }
   }
 }
