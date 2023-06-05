@@ -15,6 +15,7 @@ import { LinkComponent } from './components/link/link.component';
 import { InputComponent } from './components/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { ClickDirective } from './directives/click/click.directive';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ClickDirective } from './directives/click/click.directive';
     LinkComponent,
     InputComponent,
     SelectComponent,
-    ClickDirective
+    ClickDirective,
+    ButtonComponent
   ],
   exports: [
     NavGroupComponent,
@@ -44,7 +46,8 @@ import { ClickDirective } from './directives/click/click.directive';
     ToastComponent,
     LinkComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
