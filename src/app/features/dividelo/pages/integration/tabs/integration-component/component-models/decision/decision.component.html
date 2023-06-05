@@ -1,0 +1,73 @@
+<app-expansion>
+  <div title>
+    <app-subtitle [noMargin]="true">Integrar componente en Carrito de Compras (Toma de decisión)</app-subtitle>
+  </div>
+  <div content>
+    <app-paragraph>
+      Mediante este componente podrás incluir en tu carrito de compras una simulación de cuotas para clientes exclusivos
+      de Interbank.
+    </app-paragraph>
+    <img class="image" src="assets/images/dividelo/integration/decision.png" alt="">
+    <app-paragraph>
+      El script que carga Divídelo se encuentra desplegado en un CDN. Es suficiente con importar el script dentro de tu
+      página web y usar el componente como un <span class="bold">Custom Element</span>. Al interactuar con el link para
+      conocer más el usuario
+      verá un <span class="bold">popup</span> o <span class="bold">modal</span> en donde completará su proceso de pago.
+    </app-paragraph>
+    <app-code-block [code]="scriptModule"></app-code-block>
+    <app-code-block [code]="scriptDecision"></app-code-block>
+
+    <div class="attributes">
+      <app-subtitle>Atributos</app-subtitle>
+      <ol>
+        <app-paragraph>
+          <li>
+            <span class="bold">subscription-key (obligatorio)</span>: Credencial generada por Interbank.
+          </li>
+        </app-paragraph>
+        <app-paragraph>
+          <li>
+            <span class="bold">amount (obligatorio)</span>: Será el monto con el cual se ejecutará una simulación.
+          </li>
+        </app-paragraph>
+        <app-paragraph>
+          <li>
+            <span class="bold">logo-url (obligatorio)</span>: URL del logo del comercio (aparecerá en el popup de
+            simulación).
+          </li>
+        </app-paragraph>
+        <app-paragraph>
+          <li>
+            <span class="bold">currency (opcional)</span>: Cadena de caracteres indicando la moneda que se debe usar
+            para la simulación, recibe los valores <span class="bold">USD</span> (Dólares) o
+            <span class="bold">PEN</span> (Soles). Por defecto, el valor es PEN.
+          </li>
+        </app-paragraph>
+      </ol>
+    </div>
+
+    <br>
+    <div class="logo">
+      <app-subtitle>Logo del socio</app-subtitle>
+      <app-paragraph>
+        Para que aparezca el logo de tu página dentro del web component, será necesario proporcionar la url donde se
+        encuentra la imagen:
+      </app-paragraph>
+      <app-code-block [code]="scriptDecisionLogo"></app-code-block>
+    </div>
+
+    <br>
+    <app-paragraph>Al interactuar con el componente verá <span class="bold">popup</span> o <span
+      class="bold">modal</span>.
+    </app-paragraph>
+    <img class="image modal" src="assets/images/dividelo/integration/modal-multiple.png" alt="">
+
+    <app-banner
+      routerLink="/general/configuracion-estilos"
+      image="assets/images/dividelo/integration/gift_icon.svg"
+      title="Recuerda que puedes personalizar mucho más"
+      description="En esta sección te ofrecemos instrucciones para que cambies los colores y tipografía de los
+       componentes. Revísala.">
+    </app-banner>
+  </div>
+</app-expansion>

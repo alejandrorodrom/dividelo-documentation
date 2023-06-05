@@ -18,6 +18,9 @@ import { VersionTwoComponent } from './pages/sandbox/versions/version-two/versio
 import { VersionOneComponent } from './pages/sandbox/versions/version-one/version-one.component';
 import { PayInThreeComponent } from './pages/sandbox/versions/pay-in-three/pay-in-three.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { ExplorationComponent } from './pages/integration/tabs/integration-component/component-models/exploration/exploration.component';
+import { PreviousComponent } from './pages/integration/tabs/integration-component/component-models/previous/previous.component';
+import { DecisionComponent } from './pages/integration/tabs/integration-component/component-models/decision/decision.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { ReactiveFormsModule } from "@angular/forms";
     SandboxComponent,
     VersionTwoComponent,
     VersionOneComponent,
-    PayInThreeComponent
+    PayInThreeComponent,
+    ExplorationComponent,
+    PreviousComponent,
+    DecisionComponent
   ],
   imports: [
     CommonModule,
