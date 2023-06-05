@@ -1,0 +1,81 @@
+:host {
+  display: block;
+  position: relative;
+
+  .label {
+    display: block;
+    font-family: Geometria-Regular, monospace;
+    margin-top: 8px;
+  }
+
+  .select {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease 0s;
+    outline: none;
+    border: 1px solid rgb(217, 218, 219);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 8px 10px 13px;
+    width: 100%;
+    font-family: Geometria-Medium, monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin: 8px 0 16px;
+    user-select: none;
+
+    &__label {
+      max-width: calc(100% - 26px);
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: Geometria-Medium, monospace;
+    }
+
+    &__icon {
+      height: 18px;
+
+      & > img {
+        height: 18px;
+      }
+    }
+
+    &__options {
+      position: absolute;
+      left: 0;
+      z-index: 100;
+      background-color: white;
+      width: 100%;
+      overflow-y: auto;
+      max-height: 178px;
+      top: calc(100% + 1px);
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      box-shadow: rgb(99, 99, 99) 0 2px 4px -2px;
+      user-select: none;
+
+      .option {
+        display: block;
+        transition: all 0.2s ease 0s;
+        padding: 8px 8px 8px 13px;
+        border-bottom: 1px solid rgb(217, 218, 219);
+        font-family: Geometria-Medium, monospace;
+
+        &:hover {
+          cursor: pointer;
+          color: #05be50;
+          background-color: rgb(249, 249, 249);
+        }
+
+        &__selected {
+          color: #05be50;
+          background-color: rgb(249, 249, 249);
+        }
+      }
+    }
+  }
+
+
+}

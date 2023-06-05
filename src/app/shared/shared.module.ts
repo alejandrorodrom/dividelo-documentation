@@ -13,6 +13,8 @@ import { TabComponent } from './components/tab-group/tab/tab.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { LinkComponent } from './components/link/link.component';
 import { InputComponent } from './components/input/input.component';
+import { SelectComponent } from './components/select/select.component';
+import { ClickDirective } from './directives/click/click.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { InputComponent } from './components/input/input.component';
     TabComponent,
     ToastComponent,
     LinkComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent,
+    ClickDirective
   ],
   exports: [
     NavGroupComponent,
@@ -39,7 +43,8 @@ import { InputComponent } from './components/input/input.component';
     TabComponent,
     ToastComponent,
     LinkComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,

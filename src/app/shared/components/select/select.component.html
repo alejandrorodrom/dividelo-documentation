@@ -1,0 +1,22 @@
+<div *ngIf="label" class="label">
+  {{ label }}
+</div>
+<div appClick class="select" (click)="swapSelect()" (outsideClick)="outsideClick()">
+  <div class="select__label">
+    {{ selectedOption.label }}
+  </div>
+
+  <div class="select__icon">
+    <img src="assets/icons/arrow.svg" alt="arrow" [style.transform]="openSelect ? 'rotate(-90deg)' : 'rotate(90deg)'">
+  </div>
+
+  <div class="select__options" *ngIf="openSelect">
+    <div
+      class="option"
+      *ngFor="let option of options"
+      [class.option__selected]="option.selected"
+      (click)="select(option.value)">
+      {{ option.label }}
+    </div>
+  </div>
+</div>
