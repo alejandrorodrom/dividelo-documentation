@@ -25,7 +25,8 @@ import { InputComponent } from './components/input/input.component';
     TabGroupComponent,
     TabComponent,
     ToastComponent,
-    LinkComponent
+    LinkComponent,
+    InputComponent
   ],
   exports: [
     NavGroupComponent,
