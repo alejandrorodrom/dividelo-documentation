@@ -1,0 +1,32 @@
+<app-subtitle>Paso 3: Integra por API</app-subtitle>
+
+<app-expansion>
+  <div title>
+    <app-subtitle [noMargin]="true">Invocar API de simulador</app-subtitle>
+  </div>
+  <div content>
+    <app-subtitle>Paso 1: Invocar API de simulador</app-subtitle>
+    <app-subtitle [secondLevel]="true">Cabeceras (Headers):</app-subtitle>
+    <app-code-block [code]="header"></app-code-block>
+    <app-subtitle [secondLevel]="true">Simulación (Body):</app-subtitle>
+    <app-paragraph>Se calcularán la cuota mensual para las opciones configuradas para el comercio</app-paragraph>
+    <app-http-block
+      type="request"
+      verb="POST"
+      link="https://apiqa.digital.interbank.pe/slice-payment/v3/payment-simulation"
+      [code]="body">
+    </app-http-block>
+    <app-subtitle [secondLevel]="true">Respuesta (Response):</app-subtitle>
+    <app-http-block
+      type="response"
+      responseCode="200"
+      responseType="success"
+      [code]="response">
+    </app-http-block>
+    <app-subtitle>Paso 2: Estas muy cerca de terminar</app-subtitle>
+    <app-paragraph>
+      Por último, para pasar a producción, cambia el dominio de la libreria para llamar al API al siguiente link:
+      <span class="blue">https://api.interbank.pe/slice-payment/v3/payment-simulation</span>.
+    </app-paragraph>
+  </div>
+</app-expansion>

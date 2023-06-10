@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { ExplorationComponent } from './pages/integration/tabs/integration-component/component-models/exploration/exploration.component';
 import { PreviousComponent } from './pages/integration/tabs/integration-component/component-models/previous/previous.component';
 import { DecisionComponent } from './pages/integration/tabs/integration-component/component-models/decision/decision.component';
+import { IntegrationApiComponent } from './pages/integration/tabs/integration-api/integration-api.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { DecisionComponent } from './pages/integration/tabs/integration-componen
     PayInThreeComponent,
     ExplorationComponent,
     PreviousComponent,
-    DecisionComponent
+    DecisionComponent,
+    IntegrationApiComponent
   ],
   imports: [
     CommonModule,

@@ -19,6 +19,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputColorComponent } from './components/inputs/input-color/input-color.component';
 import { InputSwitchComponent } from './components/inputs/input-switch/input-switch.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { HttpBlockComponent } from './components/http-block/http-block.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BannerComponent } from './components/banner/banner.component';
     ButtonComponent,
     InputColorComponent,
     InputSwitchComponent,
-    BannerComponent
+    BannerComponent,
+    HttpBlockComponent
   ],
   exports: [
     NavGroupComponent,
@@ -56,7 +58,8 @@ import { BannerComponent } from './components/banner/banner.component';
     ButtonComponent,
     InputColorComponent,
     InputSwitchComponent,
-    BannerComponent
+    BannerComponent,
+    HttpBlockComponent
   ],
   imports: [
     CommonModule,

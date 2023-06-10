@@ -1,0 +1,15 @@
+<div class="line" *ngIf="type==='request'">
+  <span class="line__green">{{ verb }}</span>
+  <span class="line__blue">{{ link }}</span>
+</div>
+
+<div class="line" *ngIf="type==='response'">
+  <span class="line__blue">Response</span>
+  <span
+    [ngClass]="{
+      'line__green': responseType === 'success',
+      'line__red': responseType === 'error'
+    }">{{ responseCode }}</span>
+</div>
+
+<app-code-block [code]="code"></app-code-block>

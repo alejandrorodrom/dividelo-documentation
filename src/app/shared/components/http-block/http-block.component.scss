@@ -1,0 +1,26 @@
+.line {
+  font-family: Geometria-Regular, monospace;
+
+  & > * {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 1px 7px;
+    color: white;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__green {
+    background-color: #05be50;
+  }
+
+  &__blue {
+    background-color: #0039a6;
+  }
+
+  &__red {
+    background-color: #f44336;
+  }
+}
