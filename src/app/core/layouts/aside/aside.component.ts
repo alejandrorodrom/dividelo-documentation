@@ -10,6 +10,31 @@ export class AsideComponent {
 
   readonly data: NavGroup[] = [
     {
+      title: 'Cuenta simple',
+      items: [
+        {
+          name: 'Introducción',
+          url: '/cuenta-simple/introduccion'
+        },
+        {
+          name: 'Flujo',
+          url: '/cuenta-simple/flujo'
+        },
+        {
+          name: 'Personalización',
+          url: '/cuenta-simple/personalizacion'
+        },
+        {
+          name: 'Sandbox',
+          url: '/cuenta-simple/sandbox'
+        },
+        {
+          name: 'App móviles',
+          url: '/cuenta-simple/app-moviles'
+        }
+      ]
+    },
+    {
       title: 'Divídelo',
       items: [
         {

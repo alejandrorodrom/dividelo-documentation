@@ -1,0 +1,202 @@
+<app-title>Sandbox</app-title>
+<app-paragraph>
+  Aquí podrás interactuar con el
+  <span class="bold">web component de simulación</span>
+  para ver su funcionamiento y posibles configuraciones.
+</app-paragraph>
+
+<br>
+
+<app-paragraph>
+  Ingresa los siguientes campos para crear la simulación del componente:
+</app-paragraph>
+
+
+<form class="form" [formGroup]="account">
+  <div class="form__definition">
+    <app-subtitle [secondLevel]="true" [opaque]="true">
+      DEFINICIÓN
+    </app-subtitle>
+    <app-input
+      formControlName="jwt"
+      label="JWT"
+      [required]="true"
+      placeholder="Ingrese el JWT">
+    </app-input>
+    <app-input
+      formControlName="subscriptionKey"
+      label="Subscription Key"
+      [required]="true"
+      placeholder="Ingrese el subscription key">
+    </app-input>
+    <app-input
+      formControlName="commerceId"
+      label="Commerce Id"
+      [required]="true"
+      placeholder="Ingrese el commerce id">
+    </app-input>
+    <app-input
+      formControlName="businessName"
+      label="Nombre del negocio"
+      [required]="false"
+      placeholder="Ingrese el nombre del negocio">
+    </app-input>
+    <app-input
+      formControlName="logo"
+      label="URL del logo del negocio"
+      [required]="false"
+      placeholder="Ingrese la URL del logo del negocio">
+    </app-input>
+    <app-input-switch
+      formControlName="inline"
+      label="Inline">
+    </app-input-switch>
+  </div>
+
+  <div class="form__personalization">
+    <app-subtitle [secondLevel]="true" [opaque]="true">
+      PERSONALIZACIÓN
+    </app-subtitle>
+    <app-input-color
+      formControlName="primaryColor"
+      label="Color primario"
+      value="#05BE50">
+    </app-input-color>
+    <app-input-color
+      formControlName="secondaryColor"
+      label="Color secundario"
+      value="#0039A6">
+    </app-input-color>
+    <app-input-color
+      formControlName="accentColor"
+      label="Color acento"
+      value="#F44336">
+    </app-input-color>
+    <app-input
+      formControlName="regularTypography"
+      label="Nombre de la tipografía regular"
+      placeholder="Ingrese el nombre">
+    </app-input>
+    <app-input
+      formControlName="mediumTypography"
+      label="Nombre de la tipografía media"
+      placeholder="Ingrese el nombre">
+    </app-input>
+    <app-input
+      formControlName="boldTypography"
+      label="Nombre de la tipografía negrilla"
+      placeholder="Ingrese el nombre">
+    </app-input>
+  </div>
+
+  <br>
+  <app-button
+    [line]="true"
+    class="form__button-autocomplete"
+    (click)="showAutocompleteForm()">
+    {{ formAutocomplete ? 'Ocultar' : 'Ver' }} formulario de autocompletado
+  </app-button>
+  <br>
+
+  <div class="form__autocomplete" *ngIf="formAutocomplete">
+    <div class="form__autocomplete-1">
+      <app-input
+        formControlName="documentNumber"
+        label="Número de documento"
+        [required]="false"
+        placeholder="Ingrese el documento">
+      </app-input>
+      <app-input
+        formControlName="residenceCountry"
+        label="País de residencia"
+        [required]="false"
+        placeholder="Ingrese el país">
+      </app-input>
+      <app-input
+        formControlName="birthCountry"
+        label="País de nacimiento"
+        [required]="false"
+        placeholder="Ingrese el país">
+      </app-input>
+      <app-input
+        formControlName="nationality"
+        label="Nacionalidad"
+        [required]="false"
+        placeholder="Ingrese la nacionalidad">
+      </app-input>
+      <app-input
+        formControlName="email"
+        label="Correo electrónico"
+        [required]="false"
+        placeholder="Ingrese el correo">
+      </app-input>
+      <app-input
+        formControlName="phoneNumber"
+        label="Teléfono"
+        [required]="false"
+        placeholder="Ingrese el teléfono">
+      </app-input>
+    </div>
+    <div class="form__autocomplete-2">
+      <app-input
+        formControlName="streetName"
+        label="Dirección: Nombre de la calle"
+        [required]="false"
+        placeholder="Ingrese">
+      </app-input>
+      <app-input
+        formControlName="streetNumber"
+        label="Dirección: Número de la calle"
+        [required]="false"
+        placeholder="Ingrese">
+      </app-input>
+      <app-input
+        formControlName="block"
+        label="Dirección: Manzana"
+        [required]="false"
+        placeholder="Ingrese">
+      </app-input>
+      <app-input
+        formControlName="lot"
+        label="Dirección: Lote"
+        [required]="false"
+        placeholder="Ingrese">
+      </app-input>
+      <app-input
+        formControlName="apartment"
+        label="Dirección: Interior"
+        [required]="false"
+        placeholder="Ingrese">
+      </app-input>
+      <app-input-switch
+        formControlName="lockOnAutocomplete"
+        label="Los campos autocompletados serán de sólo lectura">
+      </app-input-switch>
+    </div>
+  </div>
+
+  <app-button
+    [disabled]="account.status === 'INVALID'"
+    class="form__button"
+    (click)="generateWebComponent()">
+    Crear Web Component
+  </app-button>
+</form>
+
+<app-subtitle>Web Component</app-subtitle>
+<app-paragraph>
+  Presiona el botón
+  <span class="bold">crear web component</span>
+  para crearlo o actualizar su configuración
+</app-paragraph>
+
+<div #webComponent class="web-component"></div>
+
+<br>
+<app-banner
+  routerLink="/cuenta-simple/introduccion"
+  image="assets/icons/tools_icon.svg"
+  title="Revisa nuestra sección de integración"
+  description="Luego de haber probado el componente en el sandbox, ya podrás revisar el código detalle para tu
+   integración.">
+</app-banner>

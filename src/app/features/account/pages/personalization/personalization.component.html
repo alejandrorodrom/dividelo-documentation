@@ -1,0 +1,114 @@
+<app-title>Personalización</app-title>
+<app-paragraph>
+  ¡Personalizar el <span class="bold">Web Component</span> de apertura de cuenta es posible! Puedes configurar la
+  paleta de colores o cambiar su comportamiento para que se adapte de la mejor manera a tu página web.
+</app-paragraph>
+
+<app-subtitle>Nombre del socio</app-subtitle>
+<app-paragraph>
+  En algunas partes del front de apertura de cuenta se hará referencia a tu negocio, por lo que para conocer tu nombre,
+  deberás proporcionar el nombre como deseas que aparezca:
+</app-paragraph>
+<app-code-block [code]="scriptBusinessName"></app-code-block>
+
+<app-subtitle>Logo del socio</app-subtitle>
+<app-paragraph>
+  Para que aparezca el logo de tu negocio dentro del WebComponent de apertura de cuenta será necesario proporcionar la
+  url donde se encuentra la imagen:
+</app-paragraph>
+<app-code-block [code]="scriptLogo"></app-code-block>
+
+<app-subtitle>Botón personalizado</app-subtitle>
+<app-paragraph>
+  El botón que abre el modal puede ser completamente personalizado, para ello se debe usar el atributo
+  <span class="bold">custom-btn</span> y ubicar dentro de la etiqueta lo que se desee que funcione como el botón,
+  podría ser incluso una imagen:
+</app-paragraph>
+<app-code-block [code]="scriptPersonalization"></app-code-block>
+<app-paragraph>Dando como resultado:</app-paragraph>
+<div class="personalization">
+  <style>
+    .my-custom-btn {
+      transition: .2s;
+      border: 0;
+      border-radius: 8px;
+      background-color: orange;
+      cursor: pointer;
+      padding: 20px 30px;
+      color: white;
+      font-size: 16px;
+      font-family: 'Geometria-Regular', monospace;
+    }
+
+    .my-custom-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <ibk-account custom-btn>
+    <button class="my-custom-btn">¡Abre tu cuenta Interbank!</button>
+  </ibk-account>
+</div>
+
+<br>
+
+<app-subtitle>Inline</app-subtitle>
+<app-paragraph>
+  Por defecto, el <span class="bold">Web Component</span> renderizará un botón que al ser accionado abrirá un popup o
+  modal con el formulario para el proceso de apertura de cuenta. Este comportamiento se puede configurar usando el
+  atributo <span class="bold">inline</span> dentro de la etiqueta que define al elemento de esta manera:
+</app-paragraph>
+<app-code-block [code]="scriptInline"></app-code-block>
+<app-paragraph>Dando como resultado:</app-paragraph>
+<div class="inline">
+  <ibk-account inline></ibk-account>
+</div>
+
+<app-subtitle>Configuración de estilo</app-subtitle>
+<app-paragraph>
+  Para configurar los colores o fuentes usados por el componente revisar la sección de
+  <app-link href="/general/configuracion-estilos" text="configuración de estilo"></app-link>.
+</app-paragraph>
+
+<app-subtitle>Autocompletado de campos en creación de cliente</app-subtitle>
+<app-paragraph>
+  Es muy probable que la información que se solicita en la vista de creación de cliente ya haya sido proporcionada al
+  tratarse de un cliente registrado en tu negocio, por ello, para mejorar la experiencia del cliente, puedes
+  proporcionar esta información con el fin de que este se autocomplete.
+</app-paragraph>
+<app-paragraph>
+  Para lograr este objetivo, los datos deberán ser suministrados dentro de un objeto plano de JavaScript. Dada esta
+  condición, no puede ser pasado como un atributo HTML y se deberá seguir la siguiente lógica:
+</app-paragraph>
+<app-code-block [code]="scriptAutocomplete"></app-code-block>
+<app-paragraph>
+  Una vez el custom-element ya esté definido, se podrán proporcionar los valores del formulario a través de la llave
+  <span class="bold">autocompleteData</span>. Cabe mencionar que todos estos datos no deben ser proporcionados en su
+  totalidad, todos ellos son opcionales.
+</app-paragraph>
+<app-paragraph>
+  La llave <span class="bold">lockOnAutocomplete</span> recibirá un valor de verdadero o falso, si esta se especifica
+  como verdadero, los campos que sean autocompletados serán bloqueados para que sean de solo lectura, es decir, no
+  podrán ser editados por el usuario.
+</app-paragraph>
+<app-paragraph>
+  Las llaves
+  <span class="bold">residenceCountry</span>,
+  <span class="bold">birthCountry</span> y
+  <span class="bold">nationality</span> deben recibir un valor acorde a la norma
+  <span class="bold">ISO 3166-1 alfa-2</span>.
+</app-paragraph>
+<app-paragraph>
+  Para ver en acción algunas de estas configuraciones será necesario en la sección
+  <app-link href="/cuenta-simple/sandbox" text="Sandbox"></app-link>
+</app-paragraph>
+
+<br>
+
+<app-banner
+  routerLink="/cuenta-simple/sandbox"
+  image="assets/icons/pcguy_icon.svg"
+  title="Prueba tu integración en nuestro Sandbox"
+  description="Tenemos un sandbox para que pruebes tus credenciales y los componentes Divídelo de una manera sencilla
+   y al instante. Pruébalo.">
+</app-banner>

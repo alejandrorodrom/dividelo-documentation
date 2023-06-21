@@ -1,0 +1,138 @@
+<app-title>Flujo</app-title>
+<app-paragraph>
+  El flujo de apertura de cuenta a través del WebComponent de Interbank puede variar entre 3 a 5 pasos, esto dependerá
+  de si la persona que quiere abrir una cuenta es cliente de Interbank o no y además, posee o no una tarjeta débito. A
+  continuación se describirá en detalle cada paso del proceso además de posibles configuraciones adicionales.
+</app-paragraph>
+
+<br>
+
+<div class="column">
+  <img class="column__img" src="assets/images/account/flow/step1.png" alt="step-one">
+  <div class="column__text">
+    <app-subtitle>Identificación de cliente</app-subtitle>
+    <app-paragraph>
+      Será el primer paso para la apertura de cuenta, en este paso, el cliente deberá proporcionar su DNI para
+      determinar si ya es un <span class="bold">cliente Interbank</span> o no.
+    </app-paragraph>
+    <app-paragraph>
+      Una vez el cliente haya ingresado su DNI, el sistema determinará si el DNI corresponde a un cliente ya
+      registrado en Interbank, de ser así, el cliente sólo deberá proporcionar información adicional sobre la moneda y
+      otros detalles como impuestos de renta.
+    </app-paragraph>
+    <app-paragraph>
+      Si el sistema determina que el DNI ingresado <span class="bold">no corresponde</span> a un cliente registrado en
+      Interbank, se agregará un paso adicional donde se detallará información personal del usuario como país de
+      residencia, direcciones, etc.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-subtitle>Preguntas KBA</app-subtitle>
+    <app-paragraph>
+      Una vez se haya identificado al cliente a través de su DNI, se dará paso a la sección de preguntas KBA, en donde
+      el cliente deberá responder una serie de preguntas para validar su identidad.
+    </app-paragraph>
+    <app-paragraph>
+      Si el cliente responde equívocamente las preguntas, un nuevo conjunto de preguntas será proporcionado para
+      intentar nuevamente, para un total de 3 intentos máximos, caso en el que el DNI será bloqueado y no podrá usarse
+      para abrir una cuenta durante las próximas 24 horas.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/account/flow/step2.png" alt="step-two">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/account/flow/step3.png" alt="step-three">
+  <div class="column__text">
+    <app-subtitle>Formulario creación de cliente (DNI no registrado en Interbank)</app-subtitle>
+    <app-paragraph>
+      Como se mencionó anteriormente, para el caso en el que el DNI no corresponde a un cliente Interbank, se añadirá
+      un paso adicional en el cual se proporcionará información personal y de contacto.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-paragraph>
+      Este paso consta de dos secciones en su formulario, en la segunda sección se proporcionará información sobre la
+      dirección de residencia del cliente.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/account/flow/step4.png" alt="step-four">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/account/flow/step5.png" alt="step-five">
+  <div class="column__text">
+    <app-subtitle>Apertura de cuenta</app-subtitle>
+    <app-paragraph>
+      Este será el paso final, en el cual el cliente escogerá la moneda de su preferencia para abrir su cuenta
+      Interbank, además, proporcionará información adicional sobre residencia fiscal o tributaria fuera del país.
+    </app-paragraph>
+    <app-paragraph>
+      Finalmente, proporcionará su acuerdo con los términos y condiciones además de otras políticas de tratamiento de
+      datos e información personales.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-paragraph>
+      En caso de que el cliente seleccione la opción en la que asegura tener residencia fiscal o tributaria fuera del
+      país, se desplegarán 3 campos adicionales en los cuales se especificará el país, número tributario y un checkbox
+      para especificar si este no es requerido en el país seleccionado.
+    </app-paragraph>
+    <app-paragraph>
+      En caso de que el cliente tenga otro país o países adicionales los cuales especificar, el botón
+      <span class="bold">Añadir otro país</span>
+      creará cuantos campos adicionales se necesiten para agregar la información necesaria.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/account/flow/tax.png" alt="tax">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/account/flow/card_full.png" alt="card-full">
+  <div class="column__text">
+    <app-paragraph>
+      Si el cliente no tiene asignada una tarjeta de débito le será informada la adquisición junto con un pequeño
+      switch para determinar si desea que su tarjeta sea activada para compras en línea y en el exterior.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-paragraph>
+      Si el cliente (existente) no cuenta con la información de correo electrónico o teléfono se le pedirá que la
+      actualice en el último paso.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/account/flow/missing_full.png" alt="missing_full">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/account/flow/card_full.png" alt="card-full">
+  <div class="column__text">
+    <app-subtitle>Creación de cuenta exitosa</app-subtitle>
+    <app-paragraph>
+      En este punto, el cliente ya habrá creado su cuenta de manera exitosa y es aquí donde se notificará al comercio
+      el evento de creación de cuenta.
+    </app-paragraph>
+  </div>
+</div>
+
+<br>
+
+<app-subtitle>Correo de notificación de apertura de cuenta</app-subtitle>
+<app-paragraph>
+  Una vez se hayan completado todos los pasos, el cliente podrá crear su cuenta, momento en el que recibirá un
+  <span class="bold">correo electrónico</span> detallando información como el número de cuenta, código CCI y otros
+  datos adicionales. El correo en mención también contendrá dos archivos PDF con el detalle más específico sobre la
+  cuenta creada más otro archivo PDF con el Contrato de Depósitos en Cuenta Corriente.
+</app-paragraph>

@@ -22,5 +22,18 @@
       background-color: #D9DADB;
       cursor: default;
     }
+
+    &__line {
+      background-color: transparent;
+      color: #05be50;
+      border: solid 2px #05be50;
+
+      &:hover {
+        cursor: pointer;
+        color: #3fd15a;
+        border-color: #3fd15a;
+        background-color: transparent;
+      }
+    }
   }
 }

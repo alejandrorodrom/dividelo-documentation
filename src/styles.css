@@ -17,3 +17,25 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+pre {
+  font-size: 16px!important;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.column__img {
+  width: 50%;
+  max-width: 480px;
+}
+
+.column__text {
+  flex-grow: 1;
+  border-radius: 0 10px 10px 0;
+  padding: 35px 80px 35px 40px;
+}
+

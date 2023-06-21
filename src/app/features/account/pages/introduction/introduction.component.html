@@ -1,0 +1,104 @@
+<app-title>Cuenta simple</app-title>
+<app-paragraph>
+  Integra de una manera sencilla el <span class="bold">Web Component</span> de
+  <span class="bold">apertura de cuenta</span> customizable, así evitarás todo el desarrollo e integración con el API
+  de Interbank además del formulario y procesos con KBA.
+</app-paragraph>
+
+<app-subtitle>Paso 1: Registro de aplicación</app-subtitle>
+<app-paragraph>
+  Deberás seguir los pasos indicados
+  <app-link href="/general/registro-socio" text="aquí"></app-link>.
+</app-paragraph>
+
+<app-subtitle>Paso 2: Integración Web Component</app-subtitle>
+<app-paragraph>
+  El script que carga Apertura de Cuenta se encuentra desplegado en un CDN. Es suficiente con importar el script
+  dentro de tu página web y usar el componente como un <span class="bold">Custom Element</span>. Al interactuar con el
+  botón el usuario verá un <span class="bold">popup</span> o <span class="bold">modal</span> en donde completará su
+  proceso de pago.
+</app-paragraph>
+
+<app-code-block [code]="scriptModule"></app-code-block>
+<app-code-block [code]="scriptComponent"></app-code-block>
+
+<div class="attributes">
+  <app-subtitle>Atributos</app-subtitle>
+  <ol>
+    <app-paragraph>
+      <li>
+        <span class="bold">jwt (obligatorio)</span>: Token de autenticación generado.
+      </li>
+    </app-paragraph>
+    <app-paragraph>
+      <li>
+        <span class="bold">subscription-key (obligatorio)</span>: Credencial generada por Interbank.
+      </li>
+    </app-paragraph>
+    <app-paragraph>
+      <li>
+        <span class="bold">commerce-id (obligatorio)</span>: Tu identificador de aplicación.
+      </li>
+    </app-paragraph>
+    <app-paragraph>
+      <li>
+        <span class="bold">logo-url (opcional)</span>: URL del logo del comercio (aparecerá en el popup de simulación).
+      </li>
+    </app-paragraph>
+  </ol>
+</div>
+
+<br>
+
+<app-banner
+  routerLink="/general/configuracion-estilos"
+  image="assets/icons/gift_icon.svg"
+  title="Recuerda que puedes personalizar mucho más"
+  description="En esta sección te ofrecemos instrucciones para que cambies los colores y tipografía de los
+       componentes. Revísala.">
+</app-banner>
+
+<br>
+
+<app-subtitle>Paso 3: Notificación de creación de cuenta</app-subtitle>
+<app-paragraph>
+  Una vez el cliente haya completado el proceso de creación de cuenta el Web Component de Interbank notificará a través
+  de un <span class="bold">CustomEvent</span> un identificador con el cual se podrá consultar al API de Interbank el
+  detalle de la cuenta. Además se emitirá si el cliente aceptó compartir los datos de sus cuentas de ahorro para asociar
+  al perfil personal (último checkbox) junto con el CCI y el id de la cuenta.
+  <span class="bold">
+    Es importante verificar este último a través del servicio de correlación explicado en el paso 3.3
+  </span>
+</app-paragraph>
+
+<app-subtitle [secondLevel]="true">Paso 3.1: Web Component Custom Event</app-subtitle>
+<app-code-block [code]="scriptCustomEvent"></app-code-block>
+
+<app-subtitle [secondLevel]="true">Paso 3.2: Autenticación</app-subtitle>
+<app-paragraph>
+  Como se describe
+  <app-link href="/general/registro-socio" text="aquí"></app-link>.
+</app-paragraph>
+
+<app-subtitle [secondLevel]="true">Paso 3.3: Consulta detalle de cuenta</app-subtitle>
+<app-paragraph>
+  Una vez se haya obtenido el Correlation Id en el paso 3.1, bastará con consultar al siguiente endpoint para obtener
+  todos los datos relacionados a la cuenta:
+</app-paragraph>
+<app-http-block
+  type="request"
+  verb="GET"
+  link="https://apiqa.digital.interbank.pe/applications/v1/correlations/{correlationId}"
+  [code]="scriptCurlCorrelation">
+</app-http-block>
+<app-http-block
+  type="response"
+  responseType="success"
+  responseCode="200"
+  [code]="scriptCorrelationResponse">
+</app-http-block>
+
+<app-paragraph>
+  Conoce el flujo de apertura de cuenta a través del WebComponent de Interbank
+  <app-link href="/cuenta-simple/flujo" text="aquí"></app-link>.
+</app-paragraph>
