@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { NavGroupComponent } from './components/nav-group/nav-group.component';
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 import { TitleComponent } from './components/title/title.component';
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
@@ -65,7 +65,8 @@ import { HttpBlockComponent } from './components/http-block/http-block.component
     CommonModule,
     NgOptimizedImage,
     RouterLink,
-    HighlightModule
+    HighlightModule,
+    RouterLinkActive
   ],
   providers: [
     {

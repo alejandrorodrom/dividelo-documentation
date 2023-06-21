@@ -23,8 +23,14 @@
     &--item {
       font-family: Geometria-Regular, monospace;
       font-size: 14.4px;
-      margin: 0 0 15px 17px;
+      margin: 0 0 0 17px;
+      padding: 7px 13px;
       cursor: pointer;
+
+      &-active {
+        background-color: #dbf5e5;
+        border-radius: 5px;
+      }
     }
   }
 }

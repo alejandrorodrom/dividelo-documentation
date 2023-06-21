@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from "@angular/router";
+import { filter } from "rxjs";
 
+interface ItemNavGroup {
+  name: string;
+  url: string;
+}
 export interface NavGroup {
   title: string;
-  items: {
-    name: string;
-    url: string;
-  }[]
+  items: ItemNavGroup[]
 }
 
 @Component({
@@ -13,10 +16,26 @@ export interface NavGroup {
   templateUrl: './nav-group.component.html',
   styleUrls: ['./nav-group.component.scss']
 })
-export class NavGroupComponent {
+export class NavGroupComponent implements OnInit {
   @Input() data!: NavGroup;
 
-  isOpen = true;
+  isOpen = false;
+
+  constructor(
+    private route: Router
+  ) {
+  }
+
+  ngOnInit(): void {
+    // console.log(this.route.snapshot.url)
+    this.route.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd)
+      )
+      .subscribe(value  => {
+        this.isOpen = !!this.data.items.find((items: ItemNavGroup) => items.url.includes((value as NavigationEnd).url))
+      })
+  }
 
   actionGroup(): void {
     this.isOpen = !this.isOpen;
