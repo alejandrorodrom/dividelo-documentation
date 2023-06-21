@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { ROUTES_DIVIDELO } from './dividelo.routing';
 import { RouterModule } from "@angular/router";
@@ -46,7 +46,6 @@ import { IntegrationApiComponent } from './pages/integration/tabs/integration-ap
     CommonModule,
     RouterModule.forChild(ROUTES_DIVIDELO),
     SharedModule,
-    NgOptimizedImage,
     ReactiveFormsModule,
   ]
 })
