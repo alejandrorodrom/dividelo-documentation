@@ -1,0 +1,141 @@
+<app-title>Flujo - Persona Natural</app-title>
+<app-paragraph>
+  El flujo de apertura de cuenta a través del WebComponent de Interbank puede variar entre 3 a 5 pasos, esto dependerá
+  de si la persona que quiere abrir una cuenta es <span class="bold">cliente de Interbank o no</span> y además, posee
+  o no una tarjeta débito. A continuación se describirá en detalle cada paso del proceso además de posibles
+  configuraciones adicionales.
+</app-paragraph>
+
+<div class="column">
+  <img class="column__img" src="assets/images/business-account/legal-person/step-one.png" alt="step-one">
+  <div class="column__text">
+    <app-subtitle>Identificación de cliente</app-subtitle>
+    <app-paragraph>
+      Será el primer paso para la apertura de cuenta, en este paso, el cliente deberá proporcionar su DNI para
+      determinar si ya es un <span class="bold">cliente Interbank</span> o no.
+    </app-paragraph>
+    <app-paragraph>
+      Una vez el cliente haya ingresado su DNI, el sistema determinará si el DNI corresponde a un cliente ya
+      registrado en Interbank, de ser así, el cliente sólo deberá proporcionar información adicional sobre la moneda y
+      otros detalles como impuestos de renta.
+    </app-paragraph>
+    <app-paragraph>
+      Si el sistema determina que el DNI ingresado <span class="bold">no corresponde</span> a un cliente registrado en
+      Interbank, se agregará un paso adicional donde se detallará información personal del usuario como país de
+      residencia, direcciones, etc.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-subtitle>2. Proceso de Validación de identidad</app-subtitle>
+    <app-paragraph>
+      Una vez se haya identificado al cliente a través de su RUC o DNI, se dará paso a la sección de preguntas KBA, en
+      donde el cliente deberá responder una serie de preguntas para validar su identidad, este paso es obligatorio para
+      continuar con el flujo.
+    </app-paragraph>
+    <app-paragraph>
+      Si el cliente responde equívocamente las preguntas, un nuevo conjunto de preguntas será proporcionado para
+      intentar nuevamente, para un total de 3 intentos máximos, caso en el que el DNI será bloqueado y no podrá usarse
+      para abrir una cuenta durante las próximas 24 horas.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/business-account/legal-person/step-two.png" alt="step-two">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/business-account/biometry/Opciones-biometria.png" alt="biometry">
+  <div class="column__text">
+    <app-paragraph>
+      Una vez que se responden correctamente las preguntas de seguridad se debe pasar por el segundo factor de
+      autenticación que corresponde a validación por biometria (Validación Facial)
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-paragraph>
+      Para poder ejecutar correctamente el proceso de validación sera necesario establecer permisos a la camara en
+      navegador, como se presenta en la imagen.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/business-account/biometry/Mensaje-permisos.png" alt="biometry">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/business-account/legal-person/step-three-info.png" alt="step-three">
+  <div class="column__text">
+    <app-subtitle>3. Formulario de Identificación del RUC</app-subtitle>
+    <app-paragraph>
+      En este paso se solicitara los datos de la residencia fiscal, conjuntamente con los datos de la partida registral,
+      en caso de no recordar el Número de partida registral puedes usar el link Conócelo aqui
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-paragraph>
+      En caso no se cuente con una residencia fiscal o tributaria en Peú no se podra continuar con el flujo y se
+      mostrara un mensaje de error.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/business-account/legal-person/step-three-error.png" alt="biometry">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/business-account/legal-person/step-four.png" alt="step-three">
+  <div class="column__text">
+    <app-subtitle>4. Configuración de la cuenta</app-subtitle>
+    <app-paragraph>
+      Este será el paso final, en el cual el cliente escogerá la moneda (Soles o Dólares) de su preferencia para abrir
+      su cuenta Interbank
+    </app-paragraph>
+    <app-paragraph>
+      Finalmente, proporcionará su acuerdo con los términos y condiciones además de otras políticas de tratamiento de
+      datos e información personales.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-paragraph>
+      Se presentara los campos para seleccionar la moneda de la cuenta las opciones Soles, Dólares o Ambos esta ultima
+      opción creara dos cuentas silmultaneamente.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/business-account/legal-person/step-four-currencies.png" alt="step-four">
+</div>
+
+<div class="column">
+  <img class="column__img" src="assets/images/business-account/legal-person/step-four-terms.png" alt="step-three">
+  <div class="column__text">
+    <app-paragraph>
+      Se deben marcar los terminos y condiciones para crear la cuenta.
+    </app-paragraph>
+  </div>
+</div>
+
+<div class="column">
+  <div class="column__text">
+    <app-subtitle>5. Creación de cuenta exitosa</app-subtitle>
+    <app-paragraph>
+      En este punto, el cliente ya habrá creado su cuenta de manera exitosa y es aquí donde se notificará al comercio
+      el evento de creación de cuenta.
+    </app-paragraph>
+  </div>
+  <img class="column__img" src="assets/images/business-account/legal-person/step-five.png" alt="step-five">
+</div>
+
+<br>
+
+<app-subtitle>Correo de notificación de apertura de cuenta</app-subtitle>
+<app-paragraph>
+  Una vez se hayan completado todos los pasos, el cliente podrá crear su cuenta, momento en el que recibirá un
+  <span class="bold">correo electrónico</span> detallando información como el número de cuenta, código CCI y otros
+  datos adicionales. El correo en mención también contendrá dos archivos PDF con el detalle más específico sobre la
+  cuenta creada más otro archivo PDF con el Contrato de Depósitos en Cuenta Corriente.
+</app-paragraph>

@@ -1,0 +1,73 @@
+<app-title>Sandbox</app-title>
+<app-paragraph>
+  Aquí podrás interactuar con el
+  <span class="bold">web component de simulación</span>
+  para ver su funcionamiento y posibles configuraciones.
+</app-paragraph>
+
+<br>
+
+<app-paragraph>
+  Ingresa los siguientes campos para crear la simulación del componente:
+</app-paragraph>
+
+<br>
+
+<form class="form" [formGroup]="businessAccount">
+  <div class="form__definition">
+    <app-subtitle [secondLevel]="true" [opaque]="true">
+      DEFINICIÓN
+    </app-subtitle>
+    <app-input
+      formControlName="sessionToken"
+      label="Session Token"
+      [required]="true"
+      placeholder="Ingrese el session token">
+    </app-input>
+    <app-input
+      formControlName="subscriptionKey"
+      label="Subscription Key"
+      [required]="true"
+      placeholder="Ingrese el subscription key">
+    </app-input>
+    <app-select
+      formControlName="triggerModel"
+      label="Modelo"
+      [options]="models">
+    </app-select>
+    <app-input
+      formControlName="companyDocumentNumber"
+      label="Número de documento de la empresa"
+      [required]="true"
+      placeholder="Ingrese el documento de la empresa">
+    </app-input>
+    <app-input
+      formControlName="documentNumber"
+      label="Número de documento Representante Legal"
+      [required]="true"
+      placeholder="Ingrese el documento del representante legal">
+    </app-input>
+  </div>
+
+  <br>
+
+  <app-button
+    [disabled]="businessAccount.status === 'INVALID'"
+    class="form__button"
+    (click)="generateWebComponent()">
+    Crear Web Component
+  </app-button>
+</form>
+
+<app-subtitle>Web Component</app-subtitle>
+<app-paragraph>
+  Presiona el botón
+  <span class="bold">crear web component</span>
+  para crearlo o actualizar su configuración
+</app-paragraph>
+
+<div #webComponent class="web-component"></div>
+
+<app-toast [type]="ToastType.INFO">
+  Recuerda que si la prueba de sandbox funciona, es muy seguro de que la integración funcione en tu página web.
+</app-toast>

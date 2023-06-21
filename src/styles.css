@@ -18,6 +18,10 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: content-box!important;
+}
+
 pre {
   font-size: 16px!important;
 }

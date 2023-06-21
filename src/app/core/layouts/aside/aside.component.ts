@@ -54,6 +54,27 @@ export class AsideComponent {
           url: '/dividelo/integracion'
         }
       ]
+    },
+    {
+      title: 'Cuenta Negocio',
+      items: [
+        {
+          name: 'Introducción',
+          url: '/cuenta-negocio/introduccion'
+        },
+        {
+          name: 'Persona natural',
+          url: '/cuenta-negocio/flujo-persona-natural'
+        },
+        {
+          name: 'Persona jurídica',
+          url: '/cuenta-negocio/flujo-persona-juridica'
+        },
+        {
+          name: 'Sandbox',
+          url: '/cuenta-negocio/sandbox'
+        }
+      ]
     }
   ];
 }
